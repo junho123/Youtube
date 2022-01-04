@@ -7,6 +7,7 @@ import VideoList from "./components/video_list/video_list";
 function App({ youtube }) {
   const [videos, setVideos] = useState([]);
   const [selectedVideo, setSelectedVideo] = useState(null);
+
   const selectVideo = (video) => {
     setSelectedVideo(video);
   };
@@ -26,6 +27,7 @@ function App({ youtube }) {
       .mostPopular() //
       .then((videos) => setVideos(videos));
   }, [youtube]);
+
   return (
     <div className={styles.app}>
       <SearchHeader onSearch={search} />
