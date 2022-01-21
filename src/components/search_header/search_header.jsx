@@ -19,10 +19,7 @@ const SearchHeader = memo(({ onSearch }) => {
   };
   return (
     <header className={styles.header}>
-      <a
-        className={styles.logo}
-        href="https://junho-react-youtube.netlify.app/"
-      >
+      <a className={styles.logo} href="/">
         <img className={styles.img} src="/images/logo.png" alt="logo" />
         <h1 className={styles.title}>Youtube</h1>
       </a>
