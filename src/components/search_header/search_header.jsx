@@ -1,5 +1,5 @@
-import styles from "./search_header.module.css";
-import React, { memo, useRef } from "react";
+import styles from './search_header.module.css';
+import React, { memo, useRef } from 'react';
 
 const SearchHeader = memo(({ onSearch }) => {
   const inputRef = useRef();
@@ -13,16 +13,19 @@ const SearchHeader = memo(({ onSearch }) => {
   };
 
   const onKeyPress = (event) => {
-    if (event.key === "Enter") {
+    if (event.key === 'Enter') {
       handleSearch();
     }
   };
   return (
     <header className={styles.header}>
-      <div className={styles.logo}>
+      <a
+        className={styles.logo}
+        href="https://junho-react-youtube.netlify.app/"
+      >
         <img className={styles.img} src="/images/logo.png" alt="logo" />
         <h1 className={styles.title}>Youtube</h1>
-      </div>
+      </a>
       <input
         ref={inputRef}
         className={styles.input}
